@@ -1,0 +1,116 @@
+{
+  "name": "materilas-vue-admin-typescript",
+  "version": "1.0.0",
+  "description": "vue admin by ts",
+  "author": "",
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build && npm run screenshot",
+    "screenshot": "screenshot -l",
+    "start": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "@types/js-cookie": "^2.2.2",
+    "axios": "^0.19.0",
+    "element-ui": "^2.10.1",
+    "js-cookie": "^2.2.0",
+    "path-to-regexp": "^3.0.0",
+    "vue": "^2.6.6",
+    "vue-class-component": "^7.1.0",
+    "vue-property-decorator": "^8.2.1",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.1",
+    "vuex-module-decorators": "^0.9.9"
+  },
+  "devDependencies": {
+    "@ice/screenshot": "^0.1.1",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-typescript": "^3.9.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "svg-sprite-loader": "^4.1.6",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/standard",
+      "@vue/typescript"
+    ],
+    "rules": {
+      "quotes": [
+        1,
+        "single"
+      ],
+      "no-console": "off",
+      "no-debugger": "off",
+      "vue/require-component-is": 0,
+      "vue/require-default-prop": 0,
+      "vue/require-prop-types": 0,
+      "vue/no-side-effects-in-computed-properties": 1,
+      "vue/no-use-v-if-with-v-for": 0
+    },
+    "plugins": [
+      "vue"
+    ],
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser",
+      "sourceType": "module"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "src/",
+    "build/",
+    "public/",
+    "screenshot.png"
+  ],
+  "scaffoldConfig": {
+    "builder": "vue-cli-service",
+    "name": "vue-admin-typescript",
+    "title": "vuets",
+    "categories": [
+      "基础模板"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ],
+    "plugins": [
+      [
+        "component",
+        {
+          "libraryName": "element-ui",
+          "styleLibraryName": "theme-chalk"
+        }
+      ]
+    ]
+  }
+}
